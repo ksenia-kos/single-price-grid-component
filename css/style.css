@@ -22,23 +22,27 @@ h2, h3, h4 {
 
 h2 {
     font-size: 1.25em; /*20px*/
-    color: hsl(179, 62%, 43%);  
+    color: hsl(179, 62%, 43%);
+    margin-bottom: 27px;
 }
 
 h3 {
     font-size: 1.125em; /*18px*/
+    margin-bottom: 21px;
 }
 
 h4 {
     font-size: 0.9375em; /*15px*/
     line-height: 1.33;
     color: hsl(71, 73%, 54%);
+    margin-bottom: 24px;
 }
 
 p {
     margin-bottom: 0;
     color:hsl(218, 22%, 67%);
     font-size: 0.875em; /*14px*/
+    line-height: 1.75;
 }
 
 ul {
@@ -58,9 +62,11 @@ a {
 .container {
     display: flex;
     flex-flow: column;
-    margin: 72px 32px;
+    width: 311px;
+    margin: 72px auto;
     border-radius: 10px;
     overflow: hidden;
+    filter: drop-shadow(0 10px 10px lightGrey);
 }
 
 .join {
@@ -73,9 +79,49 @@ a {
     color: #fff;
 }
 
+.price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.price__dollar {
+    font-size: 1.875em; /*30px*/
+    font-weight: 700;
+    padding-right: 15px;
+}
+
+.price__permonth {
+    font-size: 0.9375em; /*15px*/
+    opacity: 0.7;
+}
+
+.access {
+    font-size: 0.9375em; /*15px*/
+    margin-bottom: 30px;
+}
+
+input[type=button] {
+    color: #fff;
+    background-color: hsl(71, 73%, 54%);
+    border: none;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 5px;
+    filter: drop-shadow(0 10px 10px #26A2A0);
+}
+
 .why {
     background-color: #4ABEBD;
     color: #fff;
+}
+
+.why ul {
+    line-height: 1.5;
+    opacity: 0.7;
 }
 
 
@@ -91,11 +137,54 @@ a {
 @media (min-width: 900px) {
 
     h2 {
-        font-size: 1.4375; /*23px*/
+        font-size: 1.4375em; /*23px*/
     }
 
     h4 {
         font-size: 1.125em; /*18px*/
+    }
+
+    p {
+        font-size: 1em; /*16px*/
+    }
+
+    .padding {
+        padding: 44px 40px 40px;
+    }
+
+    .container {
+        width: 634px;
+        flex-flow: row wrap;
+        margin-top: 0;
+        margin-bottom: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .join {
+        width: 100%;
+        box-sizing: border-box;
+        padding-bottom: 44px;
+    }
+
+    .subscription {
+        width: 50%;
+        box-sizing: border-box;
+    }
+
+    .why {
+        width: 50%;
+        box-sizing: border-box;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 
 }
